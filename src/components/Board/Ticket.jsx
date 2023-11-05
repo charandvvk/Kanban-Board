@@ -12,7 +12,7 @@ const Ticket = ({ ticket }) => {
         <div className={classes.ticket}>
             <div className={classes["ticket__id-and-user"]}>
                 <div className={classes.ticket__id}>{ticket.id}</div>
-                {groupBy === "userId" && (
+                {groupBy !== "userId" && (
                     <div className={classes.ticket__user}>
                         <img
                             className={classes.ticket__image}
