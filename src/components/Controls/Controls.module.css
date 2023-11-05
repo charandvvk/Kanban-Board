@@ -1,0 +1,29 @@
+.controls {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background: #fefffe;
+}
+
+.controls__icon {
+    color: gray;
+    font-size: larger;
+}
+
+.controls button {
+    margin-left: 50px;
+    box-shadow: 0 0 5px 1px lightgray;
+    font-size: inherit;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background: #fefffe;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    font-weight: inherit;
+}
+
+.controls button:hover {
+    cursor: pointer;
+}

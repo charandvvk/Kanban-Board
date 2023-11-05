@@ -1,0 +1,32 @@
+.group {
+    width: 320px;
+}
+
+.group__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    margin-bottom: 37.5px;
+    padding: 0 10px;
+}
+
+.group__header > div {
+    display: flex;
+    align-items: center;
+    gap: 12.5px;
+}
+
+.group__image {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.group__count {
+    color: gray;
+}
+
+.group__actions {
+    font-size: larger;
+}
