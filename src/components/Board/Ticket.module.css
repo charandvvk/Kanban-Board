@@ -26,19 +26,26 @@
 .ticket__image {
     width: 30px;
     height: 30px;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
-/* .ticket__availability {
+.ticket__availability {
     position: absolute;
     bottom: 5px;
     right: 0px;
     width: 10px;
     height: 10px;
-    background-color: #ffc107;
-    border-radius: 100%;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-} */
+    border-radius: 50%;
+    box-shadow: 0 0 5px 1px lightgray;
+}
+
+.ticket__available {
+    background: #3fc569;
+}
+
+.ticket__unavailable {
+    background: #ff6c37;
+}
 
 .ticket__status-and-title {
     display: flex;

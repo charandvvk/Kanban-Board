@@ -19,7 +19,13 @@ const Ticket = ({ ticket }) => {
                             src={images[ticket.userName]}
                             alt={ticket.userName}
                         />
-                        {/* <div className={classes.ticket__availability}></div> */}
+                        <div
+                            className={`${classes.ticket__availability} ${
+                                ticket.isUserAvailable
+                                    ? classes.ticket__available
+                                    : classes.ticket__unavailable
+                            }`}
+                        ></div>
                     </div>
                 )}
             </div>
