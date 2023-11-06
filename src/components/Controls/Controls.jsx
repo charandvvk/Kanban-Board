@@ -5,10 +5,10 @@ import { BiChevronDown } from "react-icons/bi";
 import Menu from "./Menu";
 
 const Controls = () => {
-    const [isMenuVisible, setMenuVisible] = useState(false);
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
 
     const toggleMenuVisibility = () => {
-        setMenuVisible((oldState) => !oldState);
+        setIsMenuVisible((oldState) => !oldState);
     };
 
     return (
