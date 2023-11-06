@@ -22,8 +22,10 @@
     gap: 5px;
     padding: 5px;
     font-weight: inherit;
+    transition: background 0.3s ease;
 }
 
 .controls button:hover {
     cursor: pointer;
+    background: #e8e8e8;
 }

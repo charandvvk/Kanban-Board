@@ -29,8 +29,10 @@
     border: 1px solid lightgray;
     padding: 3.75px 7.5px;
     width: 112.5px;
+    transition: background 0.3s ease;
 }
 
 .menu select:hover {
     cursor: pointer;
+    background: #e8e8e8;
 }
