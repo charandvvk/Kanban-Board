@@ -1,7 +1,7 @@
 .menu {
     position: absolute;
-    left: 2.5%;
-    top: 5.125%;
+    left: max(2.5%, 36px);
+    top: max(5.25%, 47.25px);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     border: 1px solid lightgray;
     background: #f8f8fa;
     box-shadow: 0 0 5px 1px lightgray;
-    width: 14.375%;
+    width: max(14.375%, 237.8px);
     padding: 0.875% 1%;
 }
 
@@ -29,7 +29,7 @@
     background: #fefffe;
     border: 1px solid lightgray;
     transition: background 0.3s ease;
-    width: 45%;
+    width: max(45%, 93.15px);
     padding: 1.25% 1.5%;
 }
 

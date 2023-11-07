@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 10vh;
+    height: max(10vh, 92px);
 }
 
 .ticket__id-and-user {
@@ -26,7 +26,7 @@
 }
 
 .ticket__image {
-    width: 2.125vh;
+    width: max(2.125vh, 19.13px);
     border-radius: 50%;
 }
 
@@ -34,8 +34,8 @@
     position: absolute;
     bottom: 1px;
     right: -1.5px;
-    width: 0.875vh;
-    height: 0.875vh;
+    width: max(0.875vh, 7.88px);
+    height: max(0.875vh, 7.88px);
     border-radius: 50%;
     box-shadow: 0 0 5px 1px lightgray;
 }

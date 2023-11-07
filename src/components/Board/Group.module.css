@@ -1,5 +1,5 @@
 .group {
-    min-width: 20%;
+    min-width: max(20%, 273.59px);
     display: flex;
     flex-direction: column;
     gap: 2.75%;
@@ -7,7 +7,6 @@
 
 .group__header {
     display: flex;
-    height: auto;
     justify-content: space-between;
     padding: 0 2.5%;
 }
@@ -30,7 +29,7 @@
 }
 
 .group__image {
-    width: 2.125vh;
+    width: max(2.125vh, 19.13px);
     border-radius: 50%;
 }
 
