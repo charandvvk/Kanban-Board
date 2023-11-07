@@ -15,7 +15,9 @@ const Group = ({ title, tickets }) => {
             <div className={classes.group__header}>
                 <div>
                     {groupBy === "status" && (
-                        <div>{utils.statusIcons[title]}</div>
+                        <div className={classes.group__icons}>
+                            {utils.statusIcons[title]}
+                        </div>
                     )}
                     {groupBy === "userId" && (
                         <img
@@ -25,17 +27,19 @@ const Group = ({ title, tickets }) => {
                         />
                     )}
                     {groupBy === "priority" && (
-                        <div>{utils.priorityIcons[title]}</div>
+                        <div className={classes.group__icons}>
+                            {utils.priorityIcons[title]}
+                        </div>
                     )}
-                    <div>{title}</div>
+                    <div class={classes.group__title}>{title}</div>
                     <div className={classes.group__count}>{tickets.length}</div>
                 </div>
-                <div className={classes.group__actions}>
+                <div className={classes.group__icons}>
                     <AiOutlinePlus />
                     <BsThreeDots />
                 </div>
             </div>
-            <div>
+            <div className={classes.group__tickets}>
                 {tickets.map((ticket) => (
                     <Ticket key={ticket.id} ticket={ticket} />
                 ))}

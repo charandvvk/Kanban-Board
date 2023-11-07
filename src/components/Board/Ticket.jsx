@@ -32,18 +32,24 @@ const Ticket = ({ ticket }) => {
 
             <div className={classes["ticket__status-and-title"]}>
                 {groupBy !== "status" && (
-                    <div>{utils.statusIcons[ticket.status]}</div>
+                    <div className={classes.ticket__icon}>
+                        {utils.statusIcons[ticket.status]}
+                    </div>
                 )}
                 <div className={classes.ticket__title}>{ticket.title}</div>
             </div>
 
             <div className={classes["ticket__priority-and-tag"]}>
                 {groupBy !== "priority" && (
-                    <div>{utils.priorityIcons[ticket.priorityLabel]}</div>
+                    <div className={classes.ticket__icon}>
+                        {utils.priorityIcons[ticket.priorityLabel]}
+                    </div>
                 )}
                 {ticket.tag.map((tag) => (
                     <div key={tag} className={classes.ticket__tag}>
-                        <BsFillCircleFill className={classes.ticket__icon} />
+                        <BsFillCircleFill
+                            className={classes["ticket__tag-icon"]}
+                        />
                         {tag}
                     </div>
                 ))}

@@ -2,21 +2,23 @@
     border: 1px solid lightgray;
     background: #fefffe;
     box-shadow: 0 0 5px 1px lightgray;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    padding: 15px 17.5px;
+    border-radius: 5px;
+    padding: 0 5%;
     display: flex;
     flex-direction: column;
-    gap: 7.5px;
+    justify-content: space-evenly;
+    height: 10vh;
 }
 
 .ticket__id-and-user {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .ticket__id {
     color: gray;
+    white-space: nowrap;
 }
 
 .ticket__user {
@@ -24,17 +26,16 @@
 }
 
 .ticket__image {
-    width: 30px;
-    height: 30px;
+    width: 2.125vh;
     border-radius: 50%;
 }
 
 .ticket__availability {
     position: absolute;
-    bottom: 5px;
-    right: 0px;
-    width: 10px;
-    height: 10px;
+    bottom: 1px;
+    right: -1.5px;
+    width: 0.875vh;
+    height: 0.875vh;
     border-radius: 50%;
     box-shadow: 0 0 5px 1px lightgray;
 }
@@ -49,7 +50,11 @@
 
 .ticket__status-and-title {
     display: flex;
-    gap: 7.5px;
+    gap: 1.75%;
+}
+
+.ticket__icon {
+    font-size: larger;
 }
 
 .ticket__title {
@@ -61,25 +66,24 @@
 
 .ticket__priority-and-tag {
     display: flex;
-    align-items: center;
-    gap: 7.5px;
+    gap: 2.25%;
 }
 
 .ticket__priority-and-tag > div {
     border: 1px solid lightgray;
-    padding: 5px;
+    padding: 1.25%;
     border-radius: 5px;
+    align-items: center;
 }
 
 .ticket__tag {
-    font-size: smaller;
     color: gray;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+    display: flex;
+    gap: 3%;
+    white-space: nowrap;
+    font-size: smaller;
 }
 
-.ticket__icon {
+.ticket__tag-icon {
     color: silver;
-    font-size: x-small;
 }

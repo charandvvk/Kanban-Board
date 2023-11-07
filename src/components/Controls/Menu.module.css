@@ -1,18 +1,16 @@
 .menu {
     position: absolute;
-    left: 50px;
-    top: 67.5px;
-    border-radius: 10px;
+    left: 2.5%;
+    top: 5.125%;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
+    gap: 0.875vh;
     border: 1px solid lightgray;
     background: #f8f8fa;
     box-shadow: 0 0 5px 1px lightgray;
-    font-weight: bold;
-    color: gray;
-    width: 237.5px;
-    padding: 15px 20px;
-    gap: 12.5px;
+    width: 14.375%;
+    padding: 0.875% 1%;
 }
 
 .menu div {
@@ -21,15 +19,18 @@
     align-items: center;
 }
 
+.menu label {
+    color: gray;
+}
+
 .menu select {
     font-weight: inherit;
-    font-size: inherit;
     border-radius: 5px;
     background: #fefffe;
     border: 1px solid lightgray;
-    padding: 3.75px 7.5px;
-    width: 112.5px;
     transition: background 0.3s ease;
+    width: 45%;
+    padding: 1.25% 1.5%;
 }
 
 .menu select:hover {

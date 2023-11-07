@@ -1,28 +1,28 @@
 .controls {
-    height: 75px;
+    background: #fefffe;
+    height: 6vh;
     display: flex;
     align-items: center;
-    background: #fefffe;
 }
 
 .controls__icon {
     color: gray;
-    font-size: larger;
+    font-size: large;
 }
 
 .controls button {
-    margin-left: 50px;
+    margin-left: 2.5%;
     box-shadow: 0 0 5px 1px lightgray;
     font-size: inherit;
     border-radius: 5px;
     border: 1px solid lightgray;
     background: #fefffe;
     display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
     font-weight: inherit;
     transition: background 0.3s ease;
+    align-items: center;
+    gap: 5%;
+    padding: 0.125% 0.375%;
 }
 
 .controls button:hover {
