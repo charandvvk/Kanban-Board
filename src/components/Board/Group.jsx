@@ -31,7 +31,7 @@ const Group = ({ title, tickets }) => {
                             {utils.priorityIcons[title]}
                         </div>
                     )}
-                    <div class={classes.group__title}>{title}</div>
+                    <div className={classes.group__title}>{title}</div>
                     <div className={classes.group__count}>{tickets.length}</div>
                 </div>
                 <div className={classes.group__icons}>

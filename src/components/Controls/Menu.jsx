@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { forwardRef, useContext } from "react";
 import { DisplayContext } from "../../context/DisplayContext";
 import classes from "./Menu.module.css";
 
-const Menu = () => {
+const Menu = forwardRef((props, ref) => {
     const displayContext = useContext(DisplayContext);
 
     const groupingChangeHandler = (event) => {
@@ -14,7 +14,7 @@ const Menu = () => {
     };
 
     return (
-        <div className={classes.menu}>
+        <div className={classes.menu} ref={ref}>
             <div>
                 <label htmlFor="grouping">Grouping</label>
                 <select
@@ -41,6 +41,6 @@ const Menu = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Menu;
