@@ -17,7 +17,8 @@ export const groupByStatus = (rawData) => {
     const statusOrder = ["Backlog", "Todo", "In progress", "Done", "Canceled"];
     const userMap = createUserMap(rawData.users);
     return statusOrder.reduce((groupedData, status) => {
-        groupedData[status] = rawData.tickets
+        if (!groupedData[status]) groupedData[status] = {};
+        groupedData[status].tickets = rawData.tickets
             .filter((ticket) => ticket.status === status)
             .map((ticket) => ({
                 ...ticket,
@@ -34,7 +35,11 @@ export const groupByUser = (rawData) => {
         user1.name.localeCompare(user2.name)
     );
     return sortedUsers.reduce((groupedData, user) => {
-        groupedData[user.name] = rawData.tickets
+        if (!groupedData[user.name]) groupedData[user.name] = {};
+        groupedData[user.name].isUserAvailable = rawData.users.find(
+            (element) => element.name === user.name
+        ).available;
+        groupedData[user.name].tickets = rawData.tickets
             .filter((ticket) => ticket.userId === user.id)
             .map((ticket) => ({
                 ...ticket,
@@ -50,7 +55,8 @@ export const groupByPriority = (rawData) => {
     const userMap = createUserMap(rawData.users);
     return priorityOrder.reduce((groupedData, priority) => {
         const priorityLabel = priorityLabels[priority];
-        groupedData[priorityLabel] = rawData.tickets
+        if (!groupedData[priorityLabel]) groupedData[priorityLabel] = {};
+        groupedData[priorityLabel].tickets = rawData.tickets
             .filter((ticket) => ticket.priority === priority)
             .map((ticket) => ({
                 ...ticket,

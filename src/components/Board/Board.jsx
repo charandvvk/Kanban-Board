@@ -43,7 +43,7 @@ const Board = () => {
                     <Group
                         key={groupKey}
                         title={groupKey}
-                        tickets={groupedAndOrderedData[groupKey]}
+                        data={groupedAndOrderedData[groupKey]}
                     />
                 ))}
             {error && <p>{error}</p>}

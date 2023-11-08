@@ -28,9 +28,31 @@
     font-size: large;
 }
 
+.group__user {
+    position: relative;
+}
+
 .group__image {
     width: max(2.125vh, 19.13px);
     border-radius: 50%;
+}
+
+.group__availability {
+    position: absolute;
+    bottom: 1px;
+    right: -1.5px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 1px lightgray;
+    width: max(0.875vh, 7.88px);
+    height: max(0.875vh, 7.88px);
+}
+
+.group__available {
+    background: #3fc569;
+}
+
+.group__unavailable {
+    background: #ff6c37;
 }
 
 .group__title {

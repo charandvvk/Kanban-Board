@@ -7,7 +7,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
 import Ticket from "./Ticket";
 
-const Group = ({ title, tickets }) => {
+const Group = ({ title, data }) => {
     const { groupBy } = useContext(DisplayContext);
 
     return (
@@ -20,11 +20,20 @@ const Group = ({ title, tickets }) => {
                         </div>
                     )}
                     {groupBy === "userId" && (
-                        <img
-                            className={classes.group__image}
-                            src={images[title]}
-                            alt={title}
-                        />
+                        <div className={classes.group__user}>
+                            <img
+                                className={classes.group__image}
+                                src={images[title]}
+                                alt={title}
+                            />
+                            <div
+                                className={`${classes.group__availability} ${
+                                    data.isUserAvailable
+                                        ? classes.group__available
+                                        : classes.group__unavailable
+                                }`}
+                            ></div>
+                        </div>
                     )}
                     {groupBy === "priority" && (
                         <div className={classes.group__icons}>
@@ -32,7 +41,9 @@ const Group = ({ title, tickets }) => {
                         </div>
                     )}
                     <div className={classes.group__title}>{title}</div>
-                    <div className={classes.group__count}>{tickets.length}</div>
+                    <div className={classes.group__count}>
+                        {data.tickets.length}
+                    </div>
                 </div>
                 <div className={classes.group__icons}>
                     <AiOutlinePlus />
@@ -40,7 +51,7 @@ const Group = ({ title, tickets }) => {
                 </div>
             </div>
             <div className={classes.group__tickets}>
-                {tickets.map((ticket) => (
+                {data.tickets.map((ticket) => (
                     <Ticket key={ticket.id} ticket={ticket} />
                 ))}
             </div>
