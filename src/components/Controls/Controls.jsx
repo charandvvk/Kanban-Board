@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import classes from "./Controls.module.css";
-import { HiAdjustmentsHorizontal } from "react-icons/hi2";
-import { BiChevronDown } from "react-icons/bi";
+import { HiMiniAdjustmentsHorizontal } from "react-icons/hi2";
+import { BiSolidChevronDown } from "react-icons/bi";
+
 import Menu from "./Menu";
 
 const Controls = () => {
@@ -12,6 +13,7 @@ const Controls = () => {
     const toggleMenuVisibility = () => {
         setIsMenuVisible((oldState) => !oldState);
     };
+
     useEffect(() => {
         const hideMenu = (event) => {
             if (
@@ -20,9 +22,7 @@ const Controls = () => {
             )
                 setIsMenuVisible(false);
         };
-        if (isMenuVisible) {
-            document.addEventListener("mousedown", hideMenu);
-        }
+        if (isMenuVisible) document.addEventListener("mousedown", hideMenu);
         return () => {
             document.removeEventListener("mousedown", hideMenu);
         };
@@ -31,9 +31,11 @@ const Controls = () => {
     return (
         <div className={classes.controls}>
             <button onClick={toggleMenuVisibility} ref={buttonRef}>
-                <HiAdjustmentsHorizontal className={classes.controls__icon} />
+                <HiMiniAdjustmentsHorizontal
+                    className={classes.controls__icon}
+                />
                 <div>Display</div>
-                <BiChevronDown className={classes.controls__icon} />
+                <BiSolidChevronDown className={classes.controls__icon} />
             </button>
             {isMenuVisible && <Menu ref={menuRef} />}
         </div>

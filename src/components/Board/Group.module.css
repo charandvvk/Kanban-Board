@@ -11,48 +11,10 @@
     padding: 0 2.5%;
 }
 
-.group__header > div {
+.group__information {
     display: flex;
     align-items: center;
-}
-
-.group__header > div:nth-of-type(1) {
     gap: 15%;
-}
-
-.group__header > div:nth-of-type(2) {
-    gap: 20%;
-}
-
-.group__icons {
-    font-size: large;
-}
-
-.group__user {
-    position: relative;
-}
-
-.group__image {
-    width: max(2.125vh, 19.13px);
-    border-radius: 50%;
-}
-
-.group__availability {
-    position: absolute;
-    bottom: 1px;
-    right: -1.5px;
-    border-radius: 50%;
-    box-shadow: 0 0 5px 1px lightgray;
-    width: max(0.875vh, 7.88px);
-    height: max(0.875vh, 7.88px);
-}
-
-.group__available {
-    background: #3fc569;
-}
-
-.group__unavailable {
-    background: #ff6c37;
 }
 
 .group__title {
@@ -61,6 +23,14 @@
 
 .group__count {
     color: gray;
+}
+
+.group__actions > svg {
+    margin-left: max(1vh, 9px);
+    color: dimgray;
+    cursor: not-allowed;
+    font-size: larger;
+    height: 15.59px;
 }
 
 .group__tickets {

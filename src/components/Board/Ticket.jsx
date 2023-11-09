@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { DisplayContext } from "../../context/DisplayContext";
 import classes from "./Ticket.module.css";
-import * as utils from "../../utils/iconUtils";
+import User from "../UI/User";
+import Icon from "../UI/Icon";
 import images from "../../utils/imageUtils";
 import { BsFillCircleFill } from "react-icons/bs";
 
@@ -13,43 +14,26 @@ const Ticket = ({ ticket }) => {
             <div className={classes["ticket__id-and-user"]}>
                 <div className={classes.ticket__id}>{ticket.id}</div>
                 {groupBy !== "userId" && (
-                    <div className={classes.ticket__user}>
-                        <img
-                            className={classes.ticket__image}
-                            src={images[ticket.userName]}
-                            alt={ticket.userName}
-                        />
-                        <div
-                            className={`${classes.ticket__availability} ${
-                                ticket.isUserAvailable
-                                    ? classes.ticket__available
-                                    : classes.ticket__unavailable
-                            }`}
-                        ></div>
-                    </div>
+                    <User
+                        src={images[ticket.userName]}
+                        alt={ticket.userName}
+                        isUserAvailable={ticket.isUserAvailable}
+                    />
                 )}
             </div>
-
             <div className={classes["ticket__status-and-title"]}>
                 {groupBy !== "status" && (
-                    <div className={classes.ticket__icon}>
-                        {utils.statusIcons[ticket.status]}
-                    </div>
+                    <Icon groupBy="status" query={ticket.status} />
                 )}
                 <div className={classes.ticket__title}>{ticket.title}</div>
             </div>
-
             <div className={classes["ticket__priority-and-tag"]}>
                 {groupBy !== "priority" && (
-                    <div className={classes.ticket__icon}>
-                        {utils.priorityIcons[ticket.priorityLabel]}
-                    </div>
+                    <Icon groupBy="priority" query={ticket.priorityLabel} />
                 )}
                 {ticket.tag.map((tag) => (
                     <div key={tag} className={classes.ticket__tag}>
-                        <BsFillCircleFill
-                            className={classes["ticket__tag-icon"]}
-                        />
+                        <BsFillCircleFill className={classes.ticket__bullet} />
                         {tag}
                     </div>
                 ))}

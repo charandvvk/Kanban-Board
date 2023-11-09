@@ -27,7 +27,6 @@ const Menu = forwardRef((props, ref) => {
                     <option value="priority">Priority</option>
                 </select>
             </div>
-
             <div>
                 <label htmlFor="ordering">Ordering</label>
                 <select

@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { DisplayContext } from "../../context/DisplayContext";
 import classes from "./Group.module.css";
-import * as utils from "../../utils/iconUtils";
+import Icon from "../UI/Icon";
+import User from "../UI/User";
 import images from "../../utils/imageUtils";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
@@ -13,39 +14,26 @@ const Group = ({ title, data }) => {
     return (
         <div className={classes.group}>
             <div className={classes.group__header}>
-                <div>
+                <div className={classes.group__information}>
                     {groupBy === "status" && (
-                        <div className={classes.group__icons}>
-                            {utils.statusIcons[title]}
-                        </div>
+                        <Icon groupBy={groupBy} query={title} />
                     )}
                     {groupBy === "userId" && (
-                        <div className={classes.group__user}>
-                            <img
-                                className={classes.group__image}
-                                src={images[title]}
-                                alt={title}
-                            />
-                            <div
-                                className={`${classes.group__availability} ${
-                                    data.isUserAvailable
-                                        ? classes.group__available
-                                        : classes.group__unavailable
-                                }`}
-                            ></div>
-                        </div>
+                        <User
+                            src={images[title]}
+                            alt={title}
+                            isUserAvailable={data.isUserAvailable}
+                        />
                     )}
                     {groupBy === "priority" && (
-                        <div className={classes.group__icons}>
-                            {utils.priorityIcons[title]}
-                        </div>
+                        <Icon groupBy={groupBy} query={title} />
                     )}
                     <div className={classes.group__title}>{title}</div>
                     <div className={classes.group__count}>
                         {data.tickets.length}
                     </div>
                 </div>
-                <div className={classes.group__icons}>
+                <div className={classes.group__actions}>
                     <AiOutlinePlus />
                     <BsThreeDots />
                 </div>

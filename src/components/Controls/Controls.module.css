@@ -6,7 +6,7 @@
 }
 
 .controls__icon {
-    color: gray;
+    color: dimgray;
     font-size: large;
 }
 
@@ -23,9 +23,9 @@
     align-items: center;
     gap: 5%;
     padding: 0.125% 0.375%;
+    cursor: pointer;
 }
 
 .controls button:hover {
-    cursor: pointer;
     background: #e8e8e8;
 }
