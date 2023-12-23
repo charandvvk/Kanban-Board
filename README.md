@@ -66,7 +66,7 @@ To get a local copy of the project up and running, follow these steps:
 
 2. Clone the repository: `git clone https://github.com/charandvvk/Kanban-Board.git`
   
-3. Change to the project directory: `cd kanban-board`
+3. Change to the project directory: `cd Kanban-Board`
 
 4. Install dependencies: `npm i`
 
