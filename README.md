@@ -51,9 +51,9 @@ You can experience a live demo of the application [here](https://dandavvkcharan-
 
 ## Technologies
 
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [JavaScript/ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [HTML5](https://html.com/)
+- [CSS3](https://css3.com/)
+- [JavaScript/ES6](https://www.javascript.com/)
 - [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - [React Icons](https://react-icons.github.io/react-icons)
 - [React](https://react.dev)
